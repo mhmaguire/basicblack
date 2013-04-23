@@ -5,7 +5,15 @@ BasicBlackStore::Application.routes.draw do
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
-  mount Spree::Core::Engine, :at => '/'
+  mount Spree::Core::Engine, :at => '/store'
+
+  get "pages/index"
+
+  get "pages/about"
+
+  get "pages/contact"
+
+
           # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,7 +63,7 @@ BasicBlackStore::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+ root :to => 'pages#index'
 
   # See how all your routes lay out with "rake routes"
 
