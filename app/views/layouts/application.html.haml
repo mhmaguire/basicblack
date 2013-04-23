@@ -21,24 +21,23 @@
 
   %body
     %header#mainHead
-      .row
-        .small-12
-          #logo
-            =image_tag('logo.png')
-            %h4 Basic Black Home
-          %nav#mainNav
-            =render partial: 'shared/nav'
+      .twelve.columns
+        #logo
+          =image_tag('logo.png')
+          %h4 Basic Black Home
+        %nav#mainNav
+          =render partial: 'shared/nav'
     #wrapper
       = content_for?(:content) ? yield(:content) : yield
     %footer#mainFoot
-      #footContact.row
-        .small-4.columns
+      #footContact
+        .four.columns.alpha
           %p 1140 S. La Brea Ave. Los Angeles, CA 90019
           %a{href: 'mailto:kingchairguy@gmail.com'} kingchairguy@gmail.com <br/>
           %a{href:'tel+3109851886'} 310.985.1886
-        .small-8.columns.textRight
+        .eight.columns.alpha.textRight
           %h1 King Chair Guy - Los Angeles
-      .row.lineTop
+      .lineTop
         %nav#footNav
           %ul
             %li 
