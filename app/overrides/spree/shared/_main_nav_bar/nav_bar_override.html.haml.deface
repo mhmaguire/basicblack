@@ -1,0 +1,4 @@
+/replace_contents '#home-link[data-hook]'
+<%= link_to t(:home), '/index' %>
+<%= link_to 'About Us', '/about' %>
+<%= link_to 'Contact', '/contact' %>
