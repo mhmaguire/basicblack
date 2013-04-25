@@ -3,6 +3,7 @@ window.onload = function (){
 	if (theFooter !== null) {
         var space = window.innerHeight - theFooter.offsetTop;
 	    theFooter.style.height = space + 20 + 'px';
+        console.log(space);
     }
 };
 

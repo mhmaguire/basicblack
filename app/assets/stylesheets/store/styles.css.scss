@@ -78,3 +78,9 @@ $line: 1px solid rgb(180,180,180);
 	text-align: center;
 	margin-bottom:7px;
 }
+
+table {
+  tr.odd td{
+    color: #191919
+  }
+}

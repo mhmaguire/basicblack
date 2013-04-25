@@ -1,6 +1,6 @@
 class Spree::PagesController < Spree::StoreController
   helper 'spree/base'
-  layout 'application'
+  helper 'static_pages'
 
   def index
   end

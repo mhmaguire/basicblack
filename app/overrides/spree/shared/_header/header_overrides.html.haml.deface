@@ -1,0 +1,2 @@
+/replace '#header[data-hook]'
+<%= render partial: 'shared/header' %>

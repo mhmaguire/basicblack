@@ -1,0 +1,2 @@
+/ replace '#footer[data-hook]'
+<%= render partial: 'shared/footer' %>
