@@ -6,10 +6,10 @@ $c_red:         #e45353 !default;  /* Error red      */
 
 $layout_background_color:   #191919 !default;
 $title_text_color:          #FFF !default;
-$body_text_color:           #FFF !default;
+$body_text_color:           #000 !default;
 $link_text_color:           #FFF !default;
 
-$product_background_color:  #FFFFFF !default;
+$product_background_color:  #191919 !default;
 $product_title_text_color:  #FFF !default;
 $product_body_text_color:   #191919 !default;
 $product_link_text_color:   #FFF !default;
@@ -55,6 +55,10 @@ $sub_heading_font_size:                 14px !default;
 $button_font_size:                      12px !default;
 $input_box_font_size:                   13px !default;
 $base_font_size:                        12px !default;
-$border_color:                          lighten($body_text_color, 60);
+$border_color:                          #770d12;//lighten($body_text_color, 60);
 $default_border:                        1px solid $border_color;
-$button_border_color:                   rgba(0, 138, 189, .75) !default;
+$button_border_color:                   $border_color;
+
+//Variable overrides
+$main_navigation_header_font_size:      1.4em;
+$main_navigation_font_size:             1.2em;
