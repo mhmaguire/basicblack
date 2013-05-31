@@ -54,9 +54,10 @@ a:hover{
 	margin:0 0 20px -75px;
 	h4 {
 		position: relative;
-		top: -25px;
+		top: -20px;
 		left:5px;
 	}
+	img{margin-top:5px;}
 	img, h4{display:inline-block;}
 }
 #mainNav {
@@ -143,6 +144,7 @@ table {
 
 //////////Spree Overrides
 //Store main
+
 .taxons-list {
 	list-style:none;
 	li::before{
@@ -158,17 +160,23 @@ table {
 	width:100%;
 	height:auto;
 }
-ul#products li .product-image {
-	padding:0px;
-	margin-bottom:0;
-}
-ul#products li a.info {
-	padding:.7em;
-	height:1.7em;
-	margin-top:0;
-	border-radius:1px;
-	&:hover{
-		background-color: lighten(#770d12,2);
+ul#products{
+	background:url(asset-path('chair-cutout.png', image)) no-repeat;
+	background-size:contain;
+	li{
+		.product-image {
+			padding:0px;
+			margin-bottom:0;
+		}
+		a.info {
+			padding:.7em;
+			height:1.7em;
+			margin-top:0;
+			border-radius:1px;
+			&:hover{
+				background-color: lighten(#770d12,2);
+			}
+		}
 	}
 }
 #breadcrumbs {
@@ -181,7 +189,6 @@ ul#products li a.info {
 }
 //Single product view
 #product-images {
-	//border-bottom: $line;
 	border-right: $line;
 }
 #product-description div:nth-child(2){
