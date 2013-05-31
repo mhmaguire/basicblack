@@ -53,9 +53,11 @@ a:hover{
 #logo{
 	margin:0 0 20px -75px;
 	h4 {
+		font-size:1.7em;
+		font-weight:300;
 		position: relative;
-		top: -20px;
-		left:5px;
+		top: -25px;
+		left:15px;
 	}
 	img{margin-top:5px;}
 	img, h4{display:inline-block;}
@@ -63,14 +65,19 @@ a:hover{
 #mainNav {
 	float: right;
 	position:absolute;
-	top:25px;
+	top:28px;
 	right:-50px;
-	font-size:1.5em;
+	font-size:2em;
 	ul li{
 		&::before{
 			content: '|';
 			}
 		&:first-child::before{content: '';}
+		&:nth-child(4) a{
+			font-weight:bold;
+			color:lighten(#770d12,2);
+			&:hover{color:black;}
+		}
 	}
 }
 #mainNav, #footNav {
@@ -109,25 +116,35 @@ a:hover{
 		font-size:3em;
 	}
 }
-#footNav ul {
-	padding:3px 0 7px 10px;
-	text-align: center;
-	margin-bottom:7px;
-	font-size:1.3em;
-	li:first-child{
-		padding-right:50px;
+#footCredit {
+	margin-bottom:0;
+	ul.inline {
+		padding:3px 0 0 10px;
+		text-align: center;
+		margin-bottom:0px;
+		font-size:1.3em;
+		li:first-child{
+			padding-right:75px;
+		}
+		li p {
+			margin:0;
+			padding:5px 0;
+		}
 	}
-	li:nth-child(4){
-		padding-right:0;
-	}
-	li p {
-		margin:5px 0;
+	table {
+	  tr.odd td{
+	    color: #191919
+	  }
 	}
 }
-table {
-  tr.odd td{
-    color: #191919
-  }
+#footNav{
+	margin:30px 0 0 0;
+	text-align:center;
+	font-size:1.5em;
+	li{
+		margin-left:20px;
+		&:first-child{margin-left:0;}
+	}
 }
 
 //Index page
@@ -144,13 +161,19 @@ table {
 
 //////////Spree Overrides
 //Store main
-
+nav#taxonomies .taxons-list li a {
+	font-size:3em;
+	line-height:1.2em;
+}
 .taxons-list {
 	list-style:none;
-	li::before{
-		content: '» ';
-		font-size:1.2em;
-		color: rgb(150,150,150);
+	li{
+		text-transform:capitalize;
+		&::before{
+			content: '»';
+			font-size:3em;
+			color: rgb(150,150,150);
+		}
 	}
 }
 .filter_choices{
@@ -169,13 +192,20 @@ ul#products{
 			margin-bottom:0;
 		}
 		a.info {
-			padding:.7em;
+			padding-top:.25em;
 			height:1.7em;
 			margin-top:0;
 			border-radius:1px;
+			font-size:2em;
+			line-height:1.2em;
+			text-transform: capitalize;
 			&:hover{
 				background-color: lighten(#770d12,2);
 			}
+		}
+		span.price.selling {
+			font-size:2em;
+			padding-top:.7em;
 		}
 	}
 }
