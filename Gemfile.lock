@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/secoint/spree_self_delivery.git
+  revision: d56bfe07c5574f2d1cbab91f480ea6a32822fe03
+  specs:
+    spree_self_delivery (1.3.0)
+      spree_core (~> 1.3.0)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: ccd6add27a101aa3942df2e3c58a0c65b639314c
   branch: 1-3-stable
@@ -17,6 +24,14 @@ GIT
     spree_gateway (1.2.0.rc2)
       savon (~> 1.2)
       spree_core (~> 1.0)
+
+GIT
+  remote: git://github.com/spree/spree_print_invoice.git
+  revision: c81ae7442cc37a22ac50d11762c1c1eff9fdd98f
+  specs:
+    spree_print_invoice (1.0.0)
+      prawn (= 0.8.4)
+      spree_core (~> 1.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -72,6 +87,7 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     better_errors (0.8.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -91,6 +107,12 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    datashift (0.13.0)
+      rubyzip
+      spreadsheet
+    datashift_spree (0.5.0)
+      datashift (>= 0.12.0)
+      mechanize
     debug_inspector (0.0.2)
     deface (0.9.1)
       nokogiri (~> 1.5.0)
@@ -102,6 +124,8 @@ GEM
       warden (~> 1.2.1)
     devise-encryptable (0.1.1)
       devise (>= 2.1.0.rc)
+    domain_name (0.5.11)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -123,6 +147,8 @@ GEM
       haml (>= 4.0.0.rc.1)
       hpricot (~> 0.8.6)
       ruby_parser (~> 3.1.1)
+    http-cookie (1.0.1)
+      domain_name (~> 0.5)
     httparty (0.8.3)
       multi_json (~> 1.0)
       multi_xml
@@ -142,6 +168,15 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mechanize (2.7.1)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0.0)
+      mime-types (~> 1.17, >= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     meta_request (0.2.3)
       rack-contrib
       railties
@@ -151,8 +186,12 @@ GEM
       json
     multi_json (1.7.2)
     multi_xml (0.5.3)
+    net-http-digest_auth (1.3)
+    net-http-persistent (2.8)
     nokogiri (1.5.9)
+    nokogiri (1.5.9-x86-mingw32)
     nori (1.1.5)
+    ntlm-http (0.1.1)
     orm_adapter (0.4.0)
     paperclip (2.8.0)
       activerecord (>= 2.3.0)
@@ -162,6 +201,16 @@ GEM
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
+    prawn (0.8.4)
+      prawn-core (>= 0.8.4, < 0.9)
+      prawn-core (>= 0.8.4, < 0.9)
+      prawn-layout (>= 0.8.4, < 0.9)
+      prawn-layout (>= 0.8.4, < 0.9)
+      prawn-security (>= 0.8.4, < 0.9)
+      prawn-security (>= 0.8.4, < 0.9)
+    prawn-core (0.8.4)
+    prawn-layout (0.8.4)
+    prawn-security (0.8.4)
     rabl (0.7.2)
       activesupport (>= 2.3.14)
       multi_json (~> 1.0)
@@ -196,8 +245,10 @@ GEM
       polyamorous (~> 0.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    ruby-ole (1.2.11.6)
     ruby_parser (3.1.3)
       sexp_processor (~> 4.1)
+    rubyzip (0.9.9)
     sass (3.2.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -215,6 +266,8 @@ GEM
       sass-rails (>= 3.2)
       thor (~> 0.14)
     sexp_processor (4.2.1)
+    spreadsheet (0.8.5)
+      ruby-ole (>= 1.0)
     spree (1.3.2)
       spree_api (= 1.3.2)
       spree_cmd (= 1.3.2)
@@ -259,6 +312,7 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.7)
+    sqlite3 (1.3.7-x86-mingw32)
     state_machine (1.1.2)
     stringex (1.3.3)
     thor (0.18.1)
@@ -270,6 +324,10 @@ GEM
     uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    unf (0.1.1)
+      unf_ext
+    unf_ext (0.0.6)
+    unf_ext (0.0.6-x86-mingw32)
     uuidtools (2.1.3)
     versioncake (0.4.0)
       actionpack (>= 3.0)
@@ -280,16 +338,20 @@ GEM
     wasabi (2.5.1)
       httpi (~> 1.0)
       nokogiri (>= 1.4.0)
+    webrobots (0.1.1)
     zurb-foundation (4.0.9)
       sass (>= 3.2.0)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 3.2.1)
+  datashift
+  datashift_spree
   deface
   haml
   haml-rails
@@ -301,6 +363,8 @@ DEPENDENCIES
   spree (= 1.3.2)
   spree_auth_devise!
   spree_gateway!
+  spree_print_invoice!
+  spree_self_delivery!
   sqlite3
   uglifier (>= 1.0.3)
   zurb-foundation

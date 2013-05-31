@@ -9,4 +9,5 @@
  *= require store/foundation_and_overrides
  *= require store/styles
  *= require_tree .
+ *= require store/spree_self_delivery
 */

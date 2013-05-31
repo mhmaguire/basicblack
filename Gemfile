@@ -48,6 +48,11 @@ gem 'deface'
 gem 'spree', '1.3.2'
 gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '1-3-stable'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-stable'
+gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git'
+gem 'spree_self_delivery', :git => 'git://github.com/secoint/spree_self_delivery.git'
+
+gem 'datashift'
+gem 'datashift_spree'
 
 group :development do
   gem 'better_errors'
