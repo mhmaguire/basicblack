@@ -30,7 +30,7 @@ namespace :deploy do
 	  run "ln -sfn #{shared_path}/config/database.yml #{release_path}/config/database.yml"
 	end
 end
-after "bundle:install", "deploy:symlink_database_yml"
+#after "bundle:install", "deploy:symlink_database_yml"
 
 
 #namespace :unicorn do
