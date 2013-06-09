@@ -24,13 +24,13 @@ default_run_options[:shell]= '/bin/bash --login'
 
 default_environment["RAILS_ENV"] = 'production'
 
-#namespace :deploy do 
-#	task :symlink_database_yml do
-#	  run "rm #{release_path}/config/database.yml"
-#	  run "ln -sfn #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-#	end
-#end
-#after "bundle:install", "deploy:symlink_database_yml"
+namespace :deploy do 
+	task :symlink_database_yml do
+	  run "rm #{release_path}/config/database.yml"
+	  run "ln -sfn #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+	end
+end
+after "bundle:install", "deploy:symlink_database_yml"
 
 
 #namespace :unicorn do
