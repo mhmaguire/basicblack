@@ -27,8 +27,7 @@ test:
   pool: 5
 
 production:
-  adapter: sqlite3
+  adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: db/BasicBlackStore_production
-  pool: 5
+  database: basicblack_production
