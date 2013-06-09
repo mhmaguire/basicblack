@@ -8,9 +8,6 @@ gem 'rails', '3.2.13'
 group :production do 
 	gem 'mysql2'
 end
-group :development do 
-	gem 'sqlite3'
-end
 
 
 
