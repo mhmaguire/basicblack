@@ -1,5 +1,5 @@
-#require "bundler/capistrano"
-#load "deploy/assets"
+require "bundler/capistrano"
+load "deploy/assets"
 
 set :application, "BasicBlackStore"
 set :repository, "git@github.com:mhmaguire/basicblack.git"
