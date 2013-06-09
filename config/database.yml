@@ -30,4 +30,4 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: basicblack_production
+  database: basic_black_production
