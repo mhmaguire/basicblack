@@ -65,3 +65,11 @@ after "bundle:install", "deploy:symlink_database_yml"
      run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
    end
  end
+
+ namespace :images do
+  task :symlink, :except => { :no_release => true } do
+    run "rm -rf #{release_path}/public/spree"
+    run "ln -nfs #{shared_path}/spree #{release_path}/public/spree"
+  end
+end
+after "bundle:install", "images:symlink"
