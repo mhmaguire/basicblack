@@ -8,7 +8,4 @@
 //= require jquery_ujs
 //= require store/spree_core
 //= require store/spree_promo
-//= require foundation
 //= require_tree .
-
-$(document).foundation();
