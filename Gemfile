@@ -5,7 +5,15 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development do 
+	gem 'sqlite3' 
+end
+
+
+group :production do 
+	gem 'mysql2'
+end
+
 
 
 
@@ -50,6 +58,7 @@ gem 'spree_gateway', :github => 'spree/spree_gateway', :branch => '1-3-stable'
 gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-stable'
 gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git'
 gem 'spree_self_delivery', :git => 'git://github.com/secoint/spree_self_delivery.git'
+gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git', branch: '1-3-stable'
 
 gem 'datashift'
 gem 'datashift_spree'
