@@ -1,6 +1,14 @@
-.row
-	.twelve.columns
-		#slider
-			
-#temp
-	= image_tag 'splash1.jpg'
+#homePage
+	#slider
+		%ul.bxslider
+			%li
+				= image_tag ('splash1.jpg')
+			%li
+				= image_tag ('http://placehold.it/1000x400&text=this+is+a+slide')
+			%li
+				= image_tag ('http://placehold.it/1000x400&text=this+is+another+slide')
+
+:javascript
+	$(document).ready(function(){
+		$('.bxslider').bxSlider();
+	});

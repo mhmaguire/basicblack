@@ -6,7 +6,6 @@
  *= require store/spree_core
  *= require store/spree_promo
  *= require_self
- *= require store/foundation_and_overrides
  *= require store/styles
  *= require_tree .
  *= require store/spree_self_delivery
