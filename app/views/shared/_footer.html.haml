@@ -4,9 +4,9 @@
       .eight.columns.alpha
         %p 1140 S. La Brea Ave. Los Angeles, CA 90019
         %a{id: 'footEmail', href: 'mailto:kingchairguy@gmail.com'} kingchairguy@gmail.com
-        %a{href:'tel+3109851886'} 310.985.1886
+        %a{href:'tel+3239390344'} 323.939.0344
       .eight.columns.omega.textRight
-        %h1 Basic Black - Los Angeles
+        =image_tag('logo1.png')
     %nav#footCredit.row.lineTop.lineBottom
       %ul.inline
         %li
@@ -18,14 +18,12 @@
     %nav#footNav.row
       %ul.inline
         %li
-          =link_to "Terms & Conditions", '/terms'
+          %a{href:'/contact'} Contact
         %li
-          =link_to "Policies", '/policies'
+          = link_to 'About Us', '/about'
         %li
-          =link_to "Shipping Options", "/shipping"
-        %li
-          =link_to "Advanced Search", '/search'
+          =link_to "Store Policies", '/policies'
         %li
           =link_to "Site Map", '/sitemap'
         %li
-          %a{href:'/contact'} Contact
+          =link_to "Rental", '/rental'

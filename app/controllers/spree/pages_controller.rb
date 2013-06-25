@@ -9,6 +9,6 @@ class Spree::PagesController < Spree::StoreController
   	end
   end
 
-  define_actions :index, :about, :contact, :terms, :policies, :shipping, :sitemap, :search
+  define_actions :index, :about, :contact, :terms, :policies, :shipping, :sitemap, :search, :rental
 
 end
