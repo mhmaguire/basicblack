@@ -63,6 +63,7 @@ gem 'datashift'
 gem 'datashift_spree'
 
 group :development do
+  gem 'quiet_assets'
   gem 'better_errors'
   gem 'meta_request'
   gem 'binding_of_caller'

@@ -8,6 +8,11 @@ BasicBlackStore::Application.routes.draw do
   match '/index' => 'spree/pages#index'
   match '/about' => 'spree/pages#about'
   match '/contact' => 'spree/pages#contact'
+  match '/terms' => 'spree/pages#terms'
+  match '/shipping' => 'spree/pages#shipping'
+  match '/policies' => 'spree/pages#policies'
+  match '/search' => 'spree/pages#search'
+  match '/site-map' => 'spree/pages#sitemap'
   root :to => 'spree/pages#index'
   mount Spree::Core::Engine, :at => '/store'
 
