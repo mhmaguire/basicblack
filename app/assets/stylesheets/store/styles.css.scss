@@ -31,6 +31,8 @@ a:hover{
 		font-weight:bold;
 	}
 
+// Background Upholstry Pattern
+
 // application template layout
 
 .mainHead, #mainFoot {
@@ -220,8 +222,6 @@ nav#taxonomies .taxons-list li a {
 	max-height:470px;
 }
 ul#products{
-	background:url(asset-path('chair-cutout.png', image)) no-repeat;
-	background-size:contain;
 	li{
 		.product-image {
 			padding:0px;
