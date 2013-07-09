@@ -2,13 +2,44 @@
 	#slider
 		%ul.bxslider
 			%li
-				= image_tag ('splash1.jpg')
+				= image_tag ('slider/1.jpg')
 			%li
-				= image_tag ('http://placehold.it/1000x400&text=this+is+a+slide')
+				= image_tag ('slider/2.jpg')
 			%li
-				= image_tag ('http://placehold.it/1000x400&text=this+is+another+slide')
+				= image_tag ('slider/3.jpg')
+			%li
+				= image_tag ('slider/4.png')
+			%li
+				= image_tag ('slider/5.png')
+			%li
+				= image_tag ('slider/6.png')
+			%li
+				= image_tag ('slider/7.jpg')
+			%li
+				= image_tag ('slider/8.jpg')
+			%li
+				= image_tag ('slider/9.jpg')
+			%li
+				= image_tag ('slider/10.jpg')
+	#homeGrid{:"data-layout" => "2222"}
+		=image_tag('home_page/chair1.jpg')
+		=image_tag('home_page/chairs.jpg')
+		=image_tag('home_page/red_fancy.png')
+		=image_tag('home_page/legs.jpg')
+		=image_tag('home_page/fancy_pink.jpg')
+		=image_tag('home_page/red_throne.jpg')
+		=image_tag('home_page/tats.jpg')
+		=image_tag('home_page/white_fancy.jpg')
 
 :javascript
 	$(document).ready(function(){
-		$('.bxslider').bxSlider();
+		$('.bxslider').bxSlider({
+			auto: true,
+			infiniteLoop: true,
+			mode: 'fade',
+		});
+	});
+
+	$('#homeGrid').photosetGrid({
+		gutter: '5px',
 	});

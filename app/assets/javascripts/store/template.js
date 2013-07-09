@@ -5,6 +5,16 @@ window.onload = function (){
 	    theFooter.style.height = space + 20 + 'px';
         console.log(space);
     }
+  var buttonRepeat = setInterval(buttonAnimate, 3000);
+  function buttonAnimate() {
+	  $('#mainNav .button').animate({
+	   		backgroundColor: '#770d12',
+	   	}, 800, function() {
+	   		$('#mainNav .button').animate({
+	   			backgroundColor: 'rgba(0,0,0,1)',
+	   		}, 800);
+	  });
+	};
 };
 
 window.onresize = function (){

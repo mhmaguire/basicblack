@@ -2,8 +2,8 @@
 // You can use SCSS
 
 //custom classes & variabls
-$mainColor: rgb(60,60,60);
-$line: 1px solid rgb(180,180,180);
+$mainColor: rgb(0,0,0);
+$line: 1px solid rgb(0,0,0);
 
 .lineTop {border-top:$line;}
 .lineBottom {border-bottom:$line;}
@@ -16,15 +16,11 @@ $line: 1px solid rgb(180,180,180);
 }
 //Typography, shared styles
 * {
-	font-family: 'josefin sans', sans-serif;
+	font-family:'Quattrocento Sans', Helvetica, sans-serif;
 }
 
 #wrapper {
 	color: #fff;
-	p, a, div, span, li {
-		font-family: 'source sans pro', sans-serif;
-		font-weight:300;
-	}
 }
 a:hover{
 		color:#770d12;
@@ -49,40 +45,40 @@ a:hover{
 .mainHead {
 	margin-top:-10px;
 	padding-top: 10px;
-	height:75px;
-	box-shadow: 0px -4px 2px -2px $mainColor inset;
+	height:130px;
+	box-shadow: 0px -2px 2px -2px $mainColor inset;
 }
 #logo{
-	margin:0 0 20px -75px;
-	h4 {
-		font-size:1.7em;
-		font-weight:300;
-		position: relative;
-		top: -25px;
-		left:15px;
+	img{
+		height:120px;
+		margin:4px auto 0;
+		display:block;
 	}
-	img{margin-top:5px;}
-	img, h4{display:inline-block;}
 }
 #mainNav {
 	float: right;
-	position:absolute;
-	top:28px;
-	right:-50px;
-	font-size:2em;
-	ul li{
-		&::before{
-			content: '|';
-			}
-		&:first-child::before{content: '';}
-		&:nth-child(4) a{
-			font-weight:bold;
-			color:lighten(#770d12,2);
-			&:hover{color:black;}
-		}
+	margin-top:20px;
+	li#link-to-cart {
+		margin-top:58px;
+		font-size:2em;
+	} 
+	.button{
+		font-size:1.75em;
+		text-transform: uppercase;
+		padding:.7em 1em .5em;
+		font-weight:300;
+		color:white;
+		background-color:rgba(0,0,0,1);
+		border-radius:3px;
+	}
+	p{
+		margin:15px 0 0;
+		font-size:1.25em;
+		padding-left:5px;
+		padding-bottom:5px;
 	}
 }
-#mainNav, #footNav {
+#footNav {
 	ul li{
 		padding-right:10px;
 		&::before{padding-right:15px;}
@@ -93,7 +89,7 @@ a:hover{
 	margin-top:15px;
 }
 #mainFoot {
-	box-shadow: 0px 4px 2px -2px $mainColor inset;
+	box-shadow: 0px 2px 2px -2px $mainColor inset;
 	min-height: 200px;
 }
 #footContact {
@@ -124,7 +120,7 @@ a:hover{
 		padding:3px 0 0 10px;
 		text-align: center;
 		margin-bottom:0px;
-		font-size:1.3em;
+		font-size:1.5em;
 		li:first-child{
 			padding-right:75px;
 		}
@@ -150,6 +146,20 @@ a:hover{
 }
 
 //Index page
+#slider .bx-wrapper{
+	.bx-loading{
+		background:none;
+	}
+	.bx-viewport{
+		border:none;
+		background:none;
+		box-shadow:none;
+	}
+	li img {
+		margin:0 auto;
+		max-height:400px;
+	} 
+}
 
 //About Page
 #aboutPage{
