@@ -58,6 +58,7 @@ gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-s
 gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git'
 gem 'spree_self_delivery', :git => 'git://github.com/secoint/spree_self_delivery.git'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git', branch: '1-3-stable'
+gem 'spree_imagezoom', :git => 'git://github.com/kunalchaudhari/spree_imagezoom.git', branch: '1-3-stable'
 
 gem 'datashift'
 gem 'datashift_spree'

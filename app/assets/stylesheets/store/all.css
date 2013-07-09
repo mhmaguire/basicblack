@@ -9,4 +9,5 @@
  *= require store/styles
  *= require_tree .
  *= require store/spree_self_delivery
+ *= require store/spree_imagezoom
 */
