@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130531043638) do
+ActiveRecord::Schema.define(:version => 20130416020772) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -213,26 +213,25 @@ ActiveRecord::Schema.define(:version => 20130531043638) do
   add_index "spree_option_values_variants", ["variant_id"], :name => "index_spree_option_values_variants_on_variant_id"
 
   create_table "spree_orders", :force => true do |t|
-    t.string   "number",                 :limit => 15
-    t.decimal  "item_total",                           :precision => 8, :scale => 2, :default => 0.0, :null => false
-    t.decimal  "total",                                :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.string   "number",               :limit => 15
+    t.decimal  "item_total",                         :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.decimal  "total",                              :precision => 8, :scale => 2, :default => 0.0, :null => false
     t.string   "state"
-    t.decimal  "adjustment_total",                     :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.decimal  "adjustment_total",                   :precision => 8, :scale => 2, :default => 0.0, :null => false
     t.integer  "user_id"
     t.datetime "completed_at"
     t.integer  "bill_address_id"
     t.integer  "ship_address_id"
-    t.decimal  "payment_total",                        :precision => 8, :scale => 2, :default => 0.0
+    t.decimal  "payment_total",                      :precision => 8, :scale => 2, :default => 0.0
     t.integer  "shipping_method_id"
     t.string   "shipment_state"
     t.string   "payment_state"
     t.string   "email"
     t.text     "special_instructions"
-    t.datetime "created_at",                                                                          :null => false
-    t.datetime "updated_at",                                                                          :null => false
+    t.datetime "created_at",                                                                        :null => false
+    t.datetime "updated_at",                                                                        :null => false
     t.string   "currency"
     t.string   "last_ip_address"
-    t.integer  "self_delivery_point_id"
   end
 
   add_index "spree_orders", ["number"], :name => "index_spree_orders_on_number"
@@ -406,22 +405,6 @@ ActiveRecord::Schema.define(:version => 20130531043638) do
 
   add_index "spree_roles_users", ["role_id"], :name => "index_spree_roles_users_on_role_id"
   add_index "spree_roles_users", ["user_id"], :name => "index_spree_roles_users_on_user_id"
-
-  create_table "spree_self_delivery_points", :force => true do |t|
-    t.integer  "country_id"
-    t.integer  "state_id"
-    t.string   "state_name"
-    t.string   "city"
-    t.string   "address1"
-    t.string   "hours"
-    t.text     "description"
-    t.boolean  "show_country"
-    t.boolean  "show_state"
-    t.decimal  "cost",         :precision => 8, :scale => 2
-    t.integer  "position"
-    t.datetime "created_at",                                 :null => false
-    t.datetime "updated_at",                                 :null => false
-  end
 
   create_table "spree_shipments", :force => true do |t|
     t.string   "tracking"

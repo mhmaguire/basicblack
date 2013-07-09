@@ -1,12 +1,8 @@
 %header.mainHead
   .container
     .row
-      .four.columns.alpha
-        %p
-      .eight.columns
-        #logo
-          %a{href: '/index'}
-            =image_tag('logo1.png')
-      .four.columns.omega  
-        %nav#mainNav
-          =render partial: 'shared/nav'
+      #headLogo
+        %a{href: '/index'}
+          =image_tag('logo2.png', :class => "logo")
+      %nav#mainNav
+        =render partial: 'shared/nav'

@@ -1,8 +1,6 @@
-%ul.inline
-  /%li= render partial: 'spree/shared/login_bar'
-  -if static?
-    %li      
-      %p Online Store open 24/7	
-      = link_to 'Shop Now', '/store', :class => "button"
-  -else
-    %li#link-to-cart= link_to_cart
+/%li= render partial: 'spree/shared/login_bar'
+-if static?
+  %p Online Store open 24/7	
+  = link_to 'Shop Now', '/store', :class => "button"
+-else
+  #link-to-cart= link_to_cart

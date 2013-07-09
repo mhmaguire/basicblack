@@ -8,12 +8,6 @@ $line: 1px solid rgb(0,0,0);
 .lineTop {border-top:$line;}
 .lineBottom {border-bottom:$line;}
 
-.textRight{
-	text-align:right;
-}
-.textCenter {
-	text-align:center;
-}
 //Typography, shared styles
 * {
 	font-family:'Quattrocento Sans', Helvetica, sans-serif;
@@ -43,23 +37,23 @@ a:hover{
 	}
 }
 .mainHead {
-	margin-top:-10px;
-	padding-top: 10px;
-	height:130px;
-	box-shadow: 0px -2px 2px -2px $mainColor inset;
+	//height:86px;
+	//box-shadow: 0px -2px 2px -2px $mainColor inset;
 }
-#logo{
+#headLogo{
 	img{
-		height:120px;
+		height:80px;
 		margin:4px auto 0;
-		display:block;
+		display:inline-block;
+		float:left;
 	}
 }
 #mainNav {
 	float: right;
-	margin-top:20px;
-	li#link-to-cart {
-		margin-top:58px;
+	height:100%;
+	padding-top:13px;
+	#link-to-cart {
+		margin-top:28px;
 		font-size:2em;
 	} 
 	.button{
@@ -69,10 +63,10 @@ a:hover{
 		font-weight:300;
 		color:white;
 		background-color:rgba(0,0,0,1);
-		border-radius:3px;
+		border:none;
 	}
 	p{
-		margin:15px 0 0;
+		margin:0;
 		font-size:1.25em;
 		padding-left:5px;
 		padding-bottom:5px;
@@ -87,6 +81,7 @@ a:hover{
 #wrapper {
 	min-height:450px;
 	margin-top:15px;
+	clear:both;
 }
 #mainFoot {
 	box-shadow: 0px 2px 2px -2px $mainColor inset;
@@ -96,6 +91,7 @@ a:hover{
 	padding:10px 0;
 	margin-bottom:5px;
 	div:first-child{font-size:1.6em;}
+	div:nth-child(2){margin-left:30px;}
 	p {
 		margin:.25em 0 0 0;
 	}
@@ -134,6 +130,10 @@ a:hover{
 	    color: #191919
 	  }
 	}
+}
+#footLogo{
+	height:80px;
+	float:right;
 }
 #footNav{
 	margin:30px 0 0 0;
