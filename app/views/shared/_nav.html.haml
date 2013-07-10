@@ -10,8 +10,4 @@
   -else
     %li#link-to-cart
       %p{style: 'padding-left:34px;'}  Online store open 24/7
-      = link_to_cart
-    :javascript
-      window.onload = function (){
-        $('#mainNav ul li#link-to-cart a').addClass('button');
-          }
+      = link_to_cart(nil, 'button')
