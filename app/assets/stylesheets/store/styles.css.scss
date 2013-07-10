@@ -26,10 +26,10 @@ a:hover{
 ////////////// application template layout
 ////////
 body{
-	background-image:url(asset-path('fleurDeLis3.png', image));
-	background-size:200px;
-	background-repeat:repeat-y;
-	background-position:0 10px;
+	background-image:url(asset-path('fleurDeLisLeather.png', image));
+	background-size:200px auto;
+	background-repeat:no-repeat;
+	background-position:0 52%;
 	background-attachment:fixed;
 	position:relative;
 	&::after{
@@ -40,10 +40,10 @@ body{
 		right:0;
 		bottom:0;
 		width:200px;
-		background-image:url(asset-path('fleurDeLis3.png', image));
-		background-size:200px;
-		background-repeat:repeat-y;
-		background-position:0 10px;
+		background-image:url(asset-path('fleurDeLisLeather.png', image));
+		background-size:200px auto;
+		background-repeat:no-repeat;
+		background-position:0 52%;
 		//background-attachment:fixed;
 	}
 }
@@ -81,17 +81,13 @@ body{
 	ul{
 		margin-bottom:0;
 	}
-	#link-to-cart {
-		margin-top:28px;
-		font-size:2em;
-	}
 	#aboutLink{
-		font-size:1.75em;
+		font-size:2em;
 		position: relative;
 		top:-7px;
 		right:15px;
 	} 
-	.button{
+	.button, {
 		font-size:1.75em;
 		text-transform: uppercase;
 		padding:.7em 1em .5em;
@@ -106,9 +102,9 @@ body{
 		padding-bottom:5px;
 	}
 }
+#link-to-cart a{}
 //Body
 #wrapper {
-	min-height:250px;
 	margin-top:15px;
 	clear:both;
 }
@@ -118,7 +114,6 @@ body{
 }
 #footer1{
 	overflow:hidden;
-	background-color:black;
 	/*position:relative;
 	&::before{
 		content:'';

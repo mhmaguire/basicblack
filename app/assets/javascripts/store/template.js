@@ -7,10 +7,10 @@ window.onload = function (){
     }
   var buttonRepeat = setInterval(buttonAnimate, 3000);
   function buttonAnimate() {
-	  $('#mainNav .button').animate({
-	   		backgroundColor: '#D8171D',
+	  $('#mainNav .flashing').animate({
+	   		backgroundColor: '#AE1318',
 	   	}, 800, function() {
-	   		$('#mainNav .button').animate({
+	   		$('#mainNav .flashing').animate({
 	   			backgroundColor: 'rgba(0,0,0,1)',
 	   		}, 800);
 	  });

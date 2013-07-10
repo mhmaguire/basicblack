@@ -5,7 +5,13 @@
     = link_to 'About Us', '/about'
   -if static?
     %li
-      %p Online Store open 24/7
-      = link_to 'Shop Now', '/store', :class => "button"
+      %p Online store open 24/7
+      = link_to 'Shop Now', '/store', :class => "flashing button"
   -else
-    %li#link-to-cart= link_to_cart
+    %li#link-to-cart
+      %p{style: 'padding-left:34px;'}  Online store open 24/7
+      = link_to_cart
+    :javascript
+      window.onload = function (){
+        $('#mainNav ul li#link-to-cart a').addClass('button');
+          }
