@@ -1,26 +1,12 @@
 #homePage
-	#slider
-		%ul.bxslider
-			%li
-				= image_tag ('slider/1.jpg')
-			%li
-				= image_tag ('slider/2.jpg')
-			%li
-				= image_tag ('slider/3.jpg')
-			%li
-				= image_tag ('slider/4.png')
-			%li
-				= image_tag ('slider/5.png')
-			%li
-				= image_tag ('slider/6.png')
-			%li
-				= image_tag ('slider/7.jpg')
-			%li
-				= image_tag ('slider/8.jpg')
-			%li
-				= image_tag ('slider/9.jpg')
-			%li
-				= image_tag ('slider/10.jpg')
+	#homeContent.container
+		.ten.columns.alpha
+			#homeVid
+				%iframe{:allowfullscreen => "", :frameborder => "0", :src => "http://www.youtube.com/embed/d6Jln_5ieno?rel=0&start=96&autoplay=0"}
+
+		#homeCopy.six.columns.omega
+			%h3 One of our chairs was recently featured in the music Video for Tyga's "For the Road" (featuring Chris Brown). Check it out to the left!
+			%h4 In addition, our products have been featured in the hit TV shows "Dexter", "Dancing with the Stars", "True Blood", and "Revenge". Our designs have also been featured in the blockbuster movies "The Green Hornet", and "Where the Wild Things Are".
 	#homeGrid{:"data-layout" => "2222"}
 		%a{href:"#"}
 			=image_tag('home_page/chair1.jpg')
@@ -40,14 +26,6 @@
 			=image_tag('home_page/white_fancy.jpg')
 
 :javascript
-	$(document).ready(function(){
-		$('.bxslider').bxSlider({
-			auto: true,
-			infiniteLoop: true,
-			mode: 'fade',
-		});
-	});
-
 	$('#homeGrid').photosetGrid({
 		gutter: '5px',
 	});
