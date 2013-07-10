@@ -1,24 +1,26 @@
 %footer#mainFoot
-  .container
-    #footContact.row
-      .eight.columns.alpha
-        %p 1140 S. La Brea Ave. Los Angeles, CA 90019
-        %a{id: 'footEmail', href: 'mailto:kingchairguy@gmail.com'} kingchairguy@gmail.com
-        %a{href:'tel+3239390344'} 323.939.0344
-      .eight.columns.omega
-        =image_tag('logo2.png', :id => "footLogo", :class => "logo")
-    %nav#footCredit.row.lineTop.lineBottom
-      %ul.inline
-        %li
-          %p &copy; 2013 Basic Black Home. All rights reserved.
-        %li
-          %p Site by
-        %li
-          %a{href:'mailto:info@edgdesign.co'} Edg Design
+  #footer1
+    .container
+      #footContact.row
+        .seven.columns.alpha
+          %h2 Contact Basic Black
+          %form#contactForm
+            %input.input1{placeholder:'Your Name'}
+            %input.input1{placeholder:'Your Email'}
+            %textarea{placeholder:'Send Us a Message'}
+            %input#contactSubmit{type:'submit', value:'Submit'}
+          %p#pCTA Our showroom floor is open from 10am to 5pm, Monday through Saturday. Stop by to see us, or contact us using the form above.
+        #footContactCopy.seven.columns.omega
+          %h4 Address
+          %p 1140 S. La Brea Ave. <br/> Los Angeles, CA 90019
+          %h4 Email  
+          %a{id: 'footEmail', href: 'mailto:kingchairguy@gmail.com'} kingchairguy@gmail.com
+          %h4 Phone
+          %a{href:'tel+3239390344'} 323.939.0344
+  #footer2
+    .container
     %nav#footNav.row
       %ul.inline
-        %li
-          %a{href:'/contact'} Contact
         %li
           = link_to 'About Us', '/about'
         %li
@@ -27,3 +29,12 @@
           =link_to "Site Map", '/sitemap'
         %li
           =link_to "Rental", '/rental'
+    #footCredit.row
+      %ul.inline
+        %li
+          %p &copy; 2013 Basic Black. All rights reserved.
+        %li
+          %p Site by
+        %li
+          %a{href:'mailto:info@edgdesign.co'} Edg Design
+    

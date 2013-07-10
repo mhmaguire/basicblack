@@ -23,10 +23,32 @@ a:hover{
 
 // Background Upholstry Pattern
 
-// application template layout
-
+////////////// application template layout
+////////
+body{
+	background-image:url(asset-path('fleurDeLis3.png', image));
+	background-size:200px;
+	background-repeat:repeat-y;
+	background-position:0 10px;
+	background-attachment:fixed;
+	position:relative;
+	&::after{
+		content:'';
+		position:fixed;
+		z-index:-1;
+		top:0;
+		right:0;
+		bottom:0;
+		width:200px;
+		background-image:url(asset-path('fleurDeLis3.png', image));
+		background-size:200px;
+		background-repeat:repeat-y;
+		background-position:0 10px;
+		//background-attachment:fixed;
+	}
+}
+//Header
 .mainHead, #mainFoot {
-	background-color:white;
 	width: 100%;
 	p, a, li, h1, h2, h3, h4{
 		color: $mainColor;
@@ -36,7 +58,11 @@ a:hover{
 		font-weight:bold;
 	}
 }
+.mainHead, #footer2{
+	background-image:url(asset-path('large_leather.png', image));
+}
 .mainHead {
+	background-color:white;
 	//height:86px;
 	//box-shadow: 0px -2px 2px -2px $mainColor inset;
 }
@@ -52,9 +78,18 @@ a:hover{
 	float: right;
 	height:100%;
 	padding-top:13px;
+	ul{
+		margin-bottom:0;
+	}
 	#link-to-cart {
 		margin-top:28px;
 		font-size:2em;
+	}
+	#aboutLink{
+		font-size:1.75em;
+		position: relative;
+		top:-7px;
+		right:15px;
 	} 
 	.button{
 		font-size:1.75em;
@@ -67,58 +102,128 @@ a:hover{
 	}
 	p{
 		margin:0;
-		font-size:1.25em;
-		padding-left:5px;
+		padding-left:17px;
 		padding-bottom:5px;
 	}
 }
-#footNav {
-	ul li{
-		padding-right:10px;
-		&::before{padding-right:15px;}
-	}
-}
+//Body
 #wrapper {
-	min-height:450px;
+	min-height:250px;
 	margin-top:15px;
 	clear:both;
 }
-#mainFoot {
-	box-shadow: 0px 2px 2px -2px $mainColor inset;
-	min-height: 200px;
+//Footer
+#mainFoot{
+	padding-top:25px;
 }
-#footContact {
-	padding:10px 0;
-	margin-bottom:5px;
-	div:first-child{font-size:1.6em;}
-	div:nth-child(2){margin-left:30px;}
-	p {
-		margin:.25em 0 0 0;
+#footer1{
+	overflow:hidden;
+	background-color:black;
+	/*position:relative;
+	&::before{
+		content:'';
+		position:absolute;
+		left:10%;
+		width:80%;
+		border-top:1px solid white;
+	}*/
+	.container{
+		height:460px;
+		background-image:url(asset-path('legs.png', image));
+		background-size:cover;
 	}
-	a {
-		line-height: 1.2em;
-		display: inline-block;
-		&#footEmail::after{
-			content: '-';
-			margin-right:10px;
-			padding-left:15px;
+	form {
+		width:100%;
+		input, textarea{
+			margin-bottom:.5em;
+		}
+		input{
+			width:47%;
+			&:first-child{
+				margin-right:2%;
+			}
+		}
+		textarea{
+			width:95%;
+		}
+		#contactSubmit{width:60px;}
+	}	
+}
+#footContact{
+	padding:100px 50px 10px;
+	box-sizing:border-box;
+	margin-top:25px;
+	h2,h4,p,a{
+		color:white;
+	}
+	h2{
+		width:100%;
+		margin:10px 0 15px;
+		font-size: 3em;
+	}
+	#pCTA{
+		font-size:1.2em;
+	}
+	#footContactCopy{
+		padding-top:25px;
+		font-size:1.5em;
+		h4,p,a{
+			display:block;
+			text-align:right;
+			margin:0px;
+		}
+		h4{
+			font-size:1.5em;
+			margin-top:.25em;
+			&:first-child{margin-top:0px;}
+		}
+		p, a{
+			font-size:.8em;
+			padding:10px 0 0;
 		}
 	}
-	h1 {
-		margin:0;
-		line-height:50px;
-		font-size:3em;
+}
+#footer2{
+	background-color:white;
+}
+#footNav {
+	text-align:center;
+	font-size:1.5em;
+	margin-bottom:0px;
+	ul{
+		padding:15px 35px;
+		width: -moz-fit-content;
+	  width: -webkit-fit-content;
+	  width: fit-content;
+	  margin:0 auto;
+	}
+	li{
+		margin-left:10px;
+		&::before{
+				content:'-';
+				margin-right:18px;
+			}
+		&:first-child{
+			margin-left:0;
+			&::before{
+				content:'';
+				margin-right:0;
+			}
+		}
+		padding-right:10px;
 	}
 }
 #footCredit {
 	margin-bottom:0;
+	padding-bottom:10px;
+	margin-left:-20px;
 	ul.inline {
 		padding:3px 0 0 10px;
 		text-align: center;
 		margin-bottom:0px;
-		font-size:1.5em;
+		font-size:1.25em;
 		li:first-child{
-			padding-right:75px;
+			padding-right:20px;
 		}
 		li p {
 			margin:0;
@@ -134,15 +239,6 @@ a:hover{
 #footLogo{
 	height:80px;
 	float:right;
-}
-#footNav{
-	margin:30px 0 0 0;
-	text-align:center;
-	font-size:1.5em;
-	li{
-		margin-left:20px;
-		&:first-child{margin-left:0;}
-	}
 }
 
 //Index page
@@ -160,7 +256,9 @@ a:hover{
 		max-height:400px;
 	} 
 }
-
+#homeGrid{
+	.photoset-row{margin-bottom:5px;}
+}
 //About Page
 #aboutPage{
 	width:70%;
@@ -168,43 +266,6 @@ a:hover{
 	h1{text-decoration:underline;}
 	p{font-size:1.5em;}
 }
-
-//Contact Page
-#contactPage {
-	margin-top:60px;
-	> div, form{
-		width:55%;
-		float:left;
-	}
-	#contactCopy{
-		h1{text-decoration:underline;}
-		p{
-			font-size:1.8em;
-			line-height:1.1em;
-			margin:0;
-			&#cHours, &:nth-child(4), &:nth-child(6) {
-				font-size:1.3em;
-				line-height:1em;
-			} 
-		}
-		#cHours{
-			margin: -.5em 0 1em;
- 		}
- 		#cPhone{
- 			margin:-.5em 0 .5em;
- 		}
-	}
-	form {
-		width:39%;
-		margin:40px 0 0 5%;
-		input, textarea{
-			width:80%;
-			margin:5px auto;
-		}
-		#contactSubmit{width:60px;}
-	}
-}
-
 
 //////////Spree Overrides
 //Store main
