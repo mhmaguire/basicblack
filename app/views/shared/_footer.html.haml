@@ -4,11 +4,12 @@
       #footContact.row
         .seven.columns.alpha
           %h2 Contact Basic Black
-          %form#contactForm
-            %input.input1{placeholder:'Your Name'}
-            %input.input1{placeholder:'Your Email'}
-            %textarea{placeholder:'Send Us a Message'}
-            %input#contactSubmit{type:'submit', value:'Submit'}
+          =form_for :contact, url: '/contacts', method: :post, html: {id: 'contactForm'} do |f|#contactForm
+            =f.text_field :name, placeholder:'Your Name', class: :input1
+            =f.email_field :email, placeholder:'Your Email', class: :input1
+            =f.text_field :message, placeholder:'Send Us a Message'
+            =f.submit
+            /%input#contactSubmit type:'submit', value:'Submit'
           %p#pCTA Our showroom floor is open from 10am to 5pm, Monday through Saturday. Stop by to see us, or contact us using the form above.
         #footContactCopy.seven.columns.omega
           %h4 Address

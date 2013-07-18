@@ -1,6 +1,6 @@
 Spree::BaseHelper.module_eval do
     def link_to_cart(text = nil, *klass)
-      return "" if current_spree_page?(spree.cart_path)
+      return (link_to 'Shop Now', '/store', :class => "flashing button") if current_spree_page?(spree.cart_path)
 
       text = text ? h(text) : t('cart')
       css_class = nil
