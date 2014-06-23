@@ -27,6 +27,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'execjs'
 end
 
 gem 'jquery-rails'
@@ -70,4 +71,5 @@ group :development do
   gem 'binding_of_caller'
   gem "capistrano"
   gem "capistrano-rails"
+  gem 'capistrano-rvm'
 end

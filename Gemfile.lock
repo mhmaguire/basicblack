@@ -164,6 +164,9 @@ GEM
     capistrano-rails (1.1.0)
       capistrano (>= 3.0.0)
       capistrano-bundler (>= 1.0.0)
+    capistrano-rvm (0.1.1)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -391,10 +394,12 @@ DEPENDENCIES
   binding_of_caller
   capistrano
   capistrano-rails
+  capistrano-rvm
   coffee-rails (~> 3.2.1)
   datashift
   datashift_spree
   deface
+  execjs
   haml
   haml-rails
   html2haml
