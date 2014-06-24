@@ -10,6 +10,8 @@ role :app, server
 role :web, server
 role :db,  server
 
+set :rails_env, 'staging'
+
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server
